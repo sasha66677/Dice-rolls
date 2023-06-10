@@ -11,6 +11,35 @@ int countDividers(int n) {
     return count;
 }
 
+struct Result {
+    int attempts;
+    int odds;
+};
+
+Result diceRoll(int u, std::vector<int>& results, bool unique, int start = 1) {
+    const int maxDepth = u;
+
+    if (results.size() == maxDepth) {
+        int mult = 1;
+        for (int result : results) {
+            mult *= result;
+        }
+        int odds = countDividers(mult) % 2;
+        return { 1, odds };
+    }
+
+    Result totalOdd = { 0, 0 };
+    int from = (unique) ? (start) : 1;
+    for (int i = from; i <= 6; i++) {
+        results.push_back(i);
+        Result roll = diceRoll(maxDepth, results, unique, i);
+        totalOdd.odds += roll.odds;
+        totalOdd.attempts += roll.attempts;
+        results.pop_back();
+    }
+
+    return totalOdd;
+}
 
 int main() {
 

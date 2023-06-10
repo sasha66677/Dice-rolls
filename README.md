@@ -17,3 +17,7 @@ If the order of the points thrown is not important, that is, [1,2] and [2,1] are
 
 Let's do an experiment on small n to find a pattern.
 1. Create a function to calculate the number of divisors function countDividers(n)
+2. Let's create a function for sorting through all variants of throws, where maxDepth - the number of throws, unique - whether to take into account the same outcomes.
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
