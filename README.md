@@ -21,3 +21,6 @@ Let's do an experiment on small n to find a pattern.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
+Consider the option of placements with repetitions.
+Experimentally (by running the presented function, increasing the number of throws) we get the sequence - 2, 8, 38, 200, 1112, 6368, 37088.
+This sequence is presented in the https://oeis.org/A266797 database and is described by the formula a(n) = (6^n + 4^n + 3*2^n)/8

@@ -42,7 +42,14 @@ Result diceRoll(int u, std::vector<int>& results, bool unique, int start = 1) {
 }
 
 int main() {
-
-
+    std::vector<int> results;
+    bool unique = false;
+    Result result;
+    for (int u = 1; u <= 7; ++u) {
+        result = diceRoll(u, results, unique);
+        std::cout << u << std::endl;
+        std::cout << "Attempts: " << result.attempts << std::endl;
+        std::cout << "Odds: " << result.odds << std::endl;
+    }
     return 0;
 }
